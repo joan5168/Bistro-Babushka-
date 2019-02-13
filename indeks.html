@@ -45,7 +45,6 @@
     }
 
     .valgt {
-        background-color: #cc5151;
         border-radius: 4px;
         background-color: rgba(175, 159, 105, 0.92);
     }
@@ -60,9 +59,10 @@
     #indhold {
         box-sizing: border-box;
         background-color: lightgray;
-        width: 30vw;
-        height: 60vh;
+        width: 59vw;
+        height: 55vh;
         margin: auto;
+        margin-top: 0px;
         align-content: center;
 
     }
@@ -75,10 +75,10 @@
     }
 
     #popup {
-        width: 35vw;
+        width: 60vw;
         height: 70vh;
         position: fixed;
-        background-color: red;
+        background-color: rgba(0, 0, 0, 0.54);
         display: none;
         margin-left: 280px;
     }
@@ -90,7 +90,11 @@
     }
 
     #luk button {
+        margin-top: 10px;
         font-size: 1.5em;
+        border-radius: 4px;
+
+
     }
 </style>
 
@@ -163,7 +167,7 @@
                             document.querySelector("#indhold").innerHTML = `
                                 <div class="popup">
                                     <h2>${kategorier.navn}</h2>
-                                    <img src="imgs/small/${kategorier.billede}-sm.jpg" alt="${kategorier.navn}">
+                                    <img src="imgs/large/${kategorier.billede}.jpg" alt="${kategorier.navn}">
                                     <p>Kategori: ${kategorier.kategori}</p>
                                     <p>Pris: ${kategorier.pris} kr.</p>
                                     <p>Kort: ${kategorier.kort}</p>
