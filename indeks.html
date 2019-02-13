@@ -8,6 +8,7 @@
 </head>
 
 <style>
+    /*    styling for hele sitet */
     #liste {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,7 +16,7 @@
         margin: auto;
     }
 
-    img {
+    .kategorier img {
         max-width: 150px;
         margin-left: 50px;
     }
@@ -37,13 +38,6 @@
         color: rgb(142, 116, 27);
     }
 
-    .menu {
-        text-align: center;
-        background-color: rgb(219, 172, 13);
-        font-size: 15px;
-
-    }
-
     .valgt {
         border-radius: 4px;
         background-color: rgba(175, 159, 105, 0.92);
@@ -55,16 +49,13 @@
         font-size: 50px;
     }
 
-
-    #indhold {
-        box-sizing: border-box;
-        background-color: lightgray;
-        width: 59vw;
-        height: 55vh;
-        margin: auto;
-        margin-top: 0px;
-        align-content: center;
-
+    /*
+    menu linje/bar
+*/
+    .menu {
+        text-align: center;
+        background-color: rgb(219, 172, 13);
+        font-size: 15px;
     }
 
     .filter {
@@ -74,15 +65,40 @@
         margin: 10px;
     }
 
+    /*
+popup styling
+*/
+    #indhold {
+        box-sizing: border-box;
+        background-color: rgb(240, 229, 190);
+        width: 59vw;
+        height: 60vh;
+        margin: auto;
+        margin-top: 0px;
+        align-content: center;
+    }
+
     #popup {
         width: 60vw;
-        height: 70vh;
+        height: 71vh;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.54);
         display: none;
         margin-left: 280px;
+        text-align: center;
     }
 
+    #popup img {
+        max-width: 300px;
+    }
+
+    #popup p {
+        font-size: 13px;
+    }
+
+    /*
+knap til popup
+*/
     #luk {
         box-sizing: border-box;
         text-align: right;
@@ -93,8 +109,6 @@
         margin-top: 10px;
         font-size: 1.5em;
         border-radius: 4px;
-
-
     }
 </style>
 
@@ -167,12 +181,12 @@
                             document.querySelector("#indhold").innerHTML = `
                                 <div class="popup">
                                     <h2>${kategorier.navn}</h2>
-                                    <img src="imgs/large/${kategorier.billede}.jpg" alt="${kategorier.navn}">
-                                    <p>Kategori: ${kategorier.kategori}</p>
-                                    <p>Pris: ${kategorier.pris} kr.</p>
-                                    <p>Kort: ${kategorier.kort}</p>
-                                    <p>Lang: ${kategorier.lang}</p>
-                                    <p>Oprindelse: ${kategorier.oprindelse}</p>
+                                        <img src="imgs/large/${kategorier.billede}.jpg" alt="${kategorier.navn}">
+                                        <p>Kategori: ${kategorier.kategori}</p>
+                                        <p>Pris: ${kategorier.pris} kr.</p>
+                                        <p>Kort: ${kategorier.kort}</p>
+                                        <p>Lang: ${kategorier.lang}</p>
+                                        <p>Oprindelse: ${kategorier.oprindelse}</p>
                                  </div>
                                         `;
                             document.querySelector("#popup").style.display = "block";
