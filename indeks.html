@@ -72,7 +72,7 @@ popup styling
         box-sizing: border-box;
         background-color: rgb(240, 229, 190);
         width: 59vw;
-        height: 60vh;
+        height: 62vh;
         margin: auto;
         margin-top: 0px;
         align-content: center;
@@ -80,7 +80,7 @@ popup styling
 
     #popup {
         width: 60vw;
-        height: 71vh;
+        height: 72vh;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.54);
         display: none;
@@ -115,7 +115,6 @@ knap til popup
 <body>
     <header>
         <h1>Bistro Babushka</h1>
-
         <nav>
             <div class="menu">
                 <button class="filter" data-hold="alle">Alle kategorier</button>
@@ -126,7 +125,6 @@ knap til popup
                 <button class="filter" data-hold="drikkevarer">Drikkevarer</button>
             </div>
         </nav>
-
     </header>
 
     <section>
@@ -170,10 +168,9 @@ knap til popup
                                     <img src="imgs/small/${kategorier.billede}-sm.jpg" alt="${kategorier.navn}">
                                     <p>Kategori: ${kategorier.kategori}</p>
                                     <p>Pris: ${kategorier.pris} kr.</p>
-                                    <p>Kort: ${kategorier.kort}</p>
+                                    <p>${kategorier.kort}</p>
                                 </div>
                             `;
-
                         dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", åben);
 
@@ -214,7 +211,6 @@ knap til popup
                 console.log("Viser", filter)
                 visKategori();
             }
-
             getJson();
         }
     </script>
